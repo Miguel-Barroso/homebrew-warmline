@@ -1,6 +1,6 @@
 cask "warmline" do
-  version "2.4.1"
-  sha256 "ee54d4d8b233e4a9101aba8313223279b60b3d6e15dc131a9bb51fcd2b0a4581"
+  version "2.5.0"
+  sha256 "8fc6d516bd35c6a854a17c4e9480e8b5ed825226cbbd56af1bfe011f3ef73208"
 
   url "https://github.com/Miguel-Barroso/claude-warmline/archive/refs/tags/v#{version}.tar.gz"
   name "claude-warmline"
@@ -51,6 +51,8 @@ cask "warmline" do
   caveats <<~CAVEATS
     warmline is already wired into Claude Code -- `warmline status` shows what is on,
     and uninstalling unwires it again. Keeping the prompt cache warm through long
-    waits is opt-in and stays off until you run `warmline keep-warm on`.
+    waits is opt-in and stays off until you run `warmline keep-warm on`. AFK mode
+    (type `afk`, the cache stays warm until you're back) is opt-in at your own
+    account risk: `warmline afk enable` explains it and asks first.
   CAVEATS
 end
